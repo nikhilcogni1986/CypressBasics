@@ -1,6 +1,13 @@
 /// <reference types="cypress"/>
 
 describe('Login Test', function(){
+     
+    before((credentials) => {
+        cy.fixture('example').then(function(credentials){
+            this.credentials = credentials
+        })
+      })
+
     it('Registration Test To No Commerce App', function(){
         cy.visit("https://demo.nopcommerce.com/login?returnUrl=%2F")
         cy.get(".button-1.register-button").click()
@@ -22,8 +29,8 @@ describe('Login Test', function(){
 
     it('Login To App', function(){
         cy.visit("https://demo.nopcommerce.com/login?returnUrl=%2F")
-        cy.get("#Email").clear().type("nikhiltest@test.com")
-        cy.get("#Password").clear().type("Password1234")
+        cy.get("#Email").clear().type(this.credentials.Email)
+        cy.get("#Password").clear().type(this.credentials.Password)
         cy.get("button[class='button-1 login-button']").click()
 
         //mouse hover on Computers
