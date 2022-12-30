@@ -1,4 +1,5 @@
 describe('Controls suite', function(){
+    
     it('Input Box handling', function(){
         cy.visit('http://localhost:4200/pages/forms/layouts')
         

@@ -5,6 +5,5 @@ describe('Test For Radio Buttons', function(){
         cy.get("input[value='radio1']").check()
         cy.get("input[value='radio2']").check()
         cy.get("input[value='radio3']").check()
-
     })
 })

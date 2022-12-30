@@ -10,7 +10,6 @@ describe('Test Suite', ()=>{
 
         //we use find() to get descendant elements of dom provided in get()
         cy.get('.products').find('.product').should('have.length', 4)
-        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click()
-        
+        cy.get('.products').find('.product').eq(2).contains('ADD TO CART').click() 
     })
 })

@@ -19,7 +19,7 @@ describe('Login test scenario', function(){
             const product_price = $el.find('.add-info .prices span').text()
             cy.log("ProductName:=>"+ product_title+"Product Price=> "+product_price)
         })
-
+ 
         //get the details for all the notebooks
         cy.get(".list .active .sublist .inactive a[href*='notebooks']").click({force:true})
         cy.get(".product-grid .details").each(($el, index, $list) => {

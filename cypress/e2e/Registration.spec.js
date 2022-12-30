@@ -29,7 +29,7 @@ describe('Login Test', function(){
 
     it('Login To App', function(){
         cy.visit("https://demo.nopcommerce.com/login?returnUrl=%2F")
-        cy.get("#Email").clear().type(this.credentials.Email)
+        cy.get("#Email").clear().type(this.credentials.Email) 
         cy.get("#Password").clear().type(this.credentials.Password)
         cy.get("button[class='button-1 login-button']").click()
 

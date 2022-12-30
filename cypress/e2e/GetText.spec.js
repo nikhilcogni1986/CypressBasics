@@ -1,5 +1,4 @@
 /// <reference types="cypress"/>
-
 describe('Test Suite', ()=>{
 
     it('First Test Case', ()=>{

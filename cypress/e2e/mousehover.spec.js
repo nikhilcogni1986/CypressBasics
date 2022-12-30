@@ -3,7 +3,7 @@ describe('Advanced Interactions', function(){
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
 
         //hover the mouse using show method of jquery
-        cy.get(".mouse-hover-content").invoke('show')
+        cy.get(".mouse-hover-content").invoke('show') 
         cy.contains('Top').click()
         cy.url().should('include','#top')
 

@@ -1,5 +1,6 @@
 describe('Test For checkboxes', function(){
     it('Handling checkboxes', function(){
+        
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
         
         //click all the checkboxes one by one with asserting each

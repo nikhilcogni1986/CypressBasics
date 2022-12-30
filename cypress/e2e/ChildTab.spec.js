@@ -3,7 +3,6 @@
 describe('Child Tab Demo', function(){
 
     it('Child Tab Test in Cypress', function(){
-
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
 
         //click on child Tab
