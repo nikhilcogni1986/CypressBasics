@@ -1,5 +1,7 @@
 {
   "email":"nikhiltest@test.com",
   "password":"Password1234",
-  "product_name": ["Blackberry", "Nokia Edge"]
+  "product_name": ["Blackberry", "Nokia Edge"],
+  "name":"Hello",
+  "gender":"Female"
 }
