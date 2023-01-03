@@ -10,8 +10,16 @@
 //
 //
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
+Cypress.Commands.add('SelectProduct', product_name => {
+    cy.get("h4.card-title a").each(($el, index, $list) =>{
+        const product_name = $el.text()
+        if(product_name.includes('Blackberry'))
+        {
+            cy.get("button.btn.btn-info").eq(index).click()
+        }
+    })    
+})
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
