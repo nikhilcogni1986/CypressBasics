@@ -9,6 +9,8 @@
   "author": "Nikhil Rao",
   "license": "ISC",
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
+    "@cypress/browserify-preprocessor": "latest",
     "cypress": "^12.2.0"
   },
   "devDependencies": {
