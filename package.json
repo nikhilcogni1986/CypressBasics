@@ -11,7 +11,8 @@
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^15.0.0",
     "@cypress/browserify-preprocessor": "latest",
-    "cypress": "^12.2.0"
+    "cypress": "^12.2.0",
+    "cypress-xpath": "^2.0.1"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.3",

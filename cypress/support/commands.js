@@ -8,7 +8,8 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
-//
+require('cypress-xpath');
+
 // -- This is a parent command --
 Cypress.Commands.add('SelectProduct', product_name => {
     cy.get("h4.card-title a").each(($el, index, $list) =>{
