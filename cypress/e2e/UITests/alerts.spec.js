@@ -23,7 +23,7 @@ describe('Alert Test Demo', function(){
         })
     })
 
-    it.only('Alert test on another practice website', ()=>{
+    it('Alert test on another practice website', ()=>{
         cy.visit("https://testautomationpractice.blogspot.com/")
 
         //click on Alert button
@@ -34,4 +34,36 @@ describe('Alert Test Demo', function(){
             expect(alert_text).to.equal('Press a button!')
         })
     })
+
+    it('Click on Confirm button on Javascript Alert', ()=>{
+        cy.visit("http://www.webdriveruniversity.com");
+        cy.get("a[href*='Popup-Alerts']").invoke('removeAttr','target').click();
+
+        cy.get("#button4").click();
+        cy.on('window:confirm',(text)=>{
+            expect(text).to.equal('Press a button!');
+        });
+        cy.get('#confirm-alert-text').should('contain.text',"You pressed OK!");
+    });
+
+    it('Click on Cancel button on Javascript Alert', ()=>{
+        cy.visit("http://www.webdriveruniversity.com");
+        cy.get("a[href*='Popup-Alerts']").invoke('removeAttr','target').click();
+
+        cy.get("#button4").click();
+        cy.on('window:confirm',(text)=>{
+            expect(text).to.equal('Press a button!');
+            return false;
+        });
+        cy.get('#confirm-alert-text').should('contain.text',"You pressed Cancel!");
+    });
+
+    it.only('Javascript Alert example', ()=>{
+        cy.visit("http://www.webdriveruniversity.com");
+        cy.get("a[href*='Popup-Alerts']").invoke('removeAttr','target').click();
+        cy.get("#button1").click();
+        cy.on('window:alert', (alert_text)=>{
+            expect(alert_text).to.equal("I am an alert box!");
+        });
+    });
 })
