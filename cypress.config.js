@@ -18,7 +18,9 @@ module.exports = defineConfig({
     url: "https://rahulshettyacademy.com",
   },
   e2e: {
-    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
+    //specPattern: 'cypress/e2e/**/*.{js}',
+    //specPattern: 'cypress/e2e/BDD/*.feature',
+    specPattern: 'cypress/e2e/*.js',
     excludeSpecPattern: ['**/1-getting-started/*','**/2-advanced-examples/*'],
     setupNodeEvents,
   },
