@@ -1,5 +1,5 @@
 This is Sample Cypress repository which covers basic tests for all the different controls of the web page such as:
-1. Inout Box, Text Box, Radio Buttons, alerts, checkboxes, textarea and many more.
+1. Input Box, Text Box, Radio Buttons, alerts, checkboxes, textarea and many more.
 
 Pre Requiste:
 1. Install Node
