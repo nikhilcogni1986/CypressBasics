@@ -21,6 +21,16 @@ Cypress.Commands.add('SelectProduct', product_name => {
     })    
 })
 
+Cypress.Commands.add('addProductToBasket', product_name => {
+    cy.get("div.fixed_wrapper .fixed a").each(($el, index, $list) =>{
+        if($el.text() === product_name)
+        {
+            cy.log($el.text())
+            cy.get(".productcart").eq(index).click();
+        }
+    });    
+});
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
