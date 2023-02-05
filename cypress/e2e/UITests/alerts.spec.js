@@ -36,7 +36,7 @@ describe('Alert Test Demo', function(){
     })
 
     it('Click on Confirm button on Javascript Alert', ()=>{
-        cy.visit("http://www.webdriveruniversity.com");
+        cy.visit(Cypress.env("webdriveruni_url"));
         cy.get("a[href*='Popup-Alerts']").invoke('removeAttr','target').click();
 
         cy.get("#button4").click();

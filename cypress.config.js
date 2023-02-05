@@ -16,6 +16,8 @@ module.exports = defineConfig({
   defaultCommandTimeout: 6000,
   env: {
     url: "https://rahulshettyacademy.com",
+    teststore_url: "https://automationteststore.com/",
+    webdriveruni_url: "http://www.webdriveruniversity.com"
   },
   e2e: {
     //specPattern: 'cypress/e2e/**/*.{js}',

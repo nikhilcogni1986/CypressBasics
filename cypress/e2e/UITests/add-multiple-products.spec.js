@@ -7,7 +7,7 @@ describe('Addition of products to the cart', ()=>{
     });
     
     it("Add multiple products to the cart", function(){
-        cy.visit("https://automationteststore.com/");
+        cy.visit(Cypress.env("teststore_url"))
         cy.get("ul.nav-pills.categorymenu li a[href*='&path=52']").contains("Hair Care").click();
 
         this.data.productName.forEach(element => {
